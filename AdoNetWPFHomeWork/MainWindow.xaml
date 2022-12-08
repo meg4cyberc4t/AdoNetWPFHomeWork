@@ -1,0 +1,58 @@
+﻿<Window x:Class="AdoNetWPFHomeWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdoNetWPFHomeWork"
+        mc:Ignorable="d"
+        Title="Molchanov ADO NET" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="136*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="mainDataGrid"  d:ItemsSource="{d:SampleData ItemCount=5}" Initialized="mainDataGrid_Initialized" Grid.RowSpan="2"/>
+        <TextBox Name="TBI" HorizontalAlignment="Right" Margin="0,144,602,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="129" Height="20" Grid.RowSpan="2"/>
+        <TextBox Name="TBF" HorizontalAlignment="Right" Margin="0,144,468,0" TextWrapping="Wrap" Text="Фамилия&#xD;&#xA;" VerticalAlignment="Top" Width="129" Height="20" Grid.RowSpan="2"/>
+        <TextBox Name="TBO" HorizontalAlignment="Center" Margin="0,144,0,0" TextWrapping="Wrap" Text="Отчество&#xA;" VerticalAlignment="Top" Width="128" Height="20" Grid.RowSpan="2"/>
+        <TextBox Name="TBPassNumber" HorizontalAlignment="Left" Margin="469,144,0,0" TextWrapping="Wrap" Text="123 123" VerticalAlignment="Top" Width="128" Height="20" Grid.RowSpan="2"/>
+        <TextBox Name="TBPassSeries" HorizontalAlignment="Right" Margin="0,144,70,0" TextWrapping="Wrap" Text="12 12&#xA;" VerticalAlignment="Top" Width="128" Height="20" Grid.RowSpan="2"/>
+        <TextBox Name="TBPassIssues" HorizontalAlignment="Right" Margin="0,13,468,0" TextWrapping="Wrap" Text="Кем выдан&#xA;" VerticalAlignment="Top" Width="262" Height="20" Grid.Row="1">
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </TextBox>
+        <TextBox Name="TBPhone" HorizontalAlignment="Right" Margin="0,13,267,0" TextWrapping="Wrap" Text="+7(916)058-28-80&#xA;" VerticalAlignment="Top" Width="196" Height="20" Grid.Row="1">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="TBEmail" HorizontalAlignment="Right" Margin="0,13,70,0" TextWrapping="Wrap" Text="MolchanovIA20@st.ithub.ru&#xA;" Width="192" Grid.Row="1" Height="20" VerticalAlignment="Top">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Создать пользователя" HorizontalAlignment="Center" VerticalAlignment="Top" Width="660" Click="Button_Click" Margin="0,45,0,0" Grid.Row="1"/>
+        <Label Content="Всего пользователей: " HorizontalAlignment="Left" Margin="67,94,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox Name="TBUsersCount" HorizontalAlignment="Left" Margin="198,98,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Минимальный ID: " HorizontalAlignment="Left" Margin="67,125,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Максимальный ID: " HorizontalAlignment="Left" Margin="70,156,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox Name="TBUsersMin" HorizontalAlignment="Left" Margin="198,129,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TBUsersMax" HorizontalAlignment="Left" Margin="198,164,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
